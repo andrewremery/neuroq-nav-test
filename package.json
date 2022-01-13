@@ -1,0 +1,28 @@
+{
+  "name": "nav-test",
+  "version": "1.0.0",
+  "description": "A code exam for a front-end developer position at LifeSeasons.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewremery/neuroq-nav-test.git"
+  },
+  "author": "Andrew R Emery",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrewremery/neuroq-nav-test/issues"
+  },
+  "homepage": "https://github.com/andrewremery/neuroq-nav-test#readme",
+  "devDependencies": {
+    "grunt": "^1.4.1",
+    "grunt-contrib-coffee": "^2.1.0",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-cssmin": "^4.0.0",
+    "grunt-contrib-sass": "^0.7.3",
+    "grunt-contrib-uglify": "^5.0.1",
+    "grunt-contrib-watch": "^1.1.0"
+  }
+}
