@@ -13,12 +13,27 @@ $(document).ready(function () {
             $('.dropdown-submenu .show').removeClass('show');
         });
 
-
         return false;
     });
 
+    // Toggle mobile menu when hamburger is clicked
+    $('#hamburg-icon').on('click', function (e) {
+        $('#navbarNavDropdown').toggleClass("show");
+        e.preventDefault();
+    });
+
     // Make sub menu trigger on mouse in/out on desktop
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 768) { //if bigger then tablet
+
+        everyitem.addEventListener('mouseleave', function (e) {
+            let el_link = this.querySelector('.dropdown-toggle');
+
+            if (el_link != null) {
+                let nextEl = el_link.nextElementSibling;
+                el_link.classList.remove('show');
+                nextEl.classList.remove('show');
+            }
+        })
 
         document.querySelectorAll('.navbar .nav-item').forEach(function (everyitem) {
 
