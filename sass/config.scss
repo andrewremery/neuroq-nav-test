@@ -1,0 +1,24 @@
+/*====Fonts=====*/
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "vendor/fa/fontawesome.scss";
+@import "vendor/fa/solid.scss";
+@import "vendor/fa/brands.scss";
+
+/*=====Varaibles=====*/
+
+//Font Families
+$nav-font: "Red Hat Display", "arial", san-serif;
+
+//Colors
+$brand-blue: #4ec2eb;
+$light-gray: #eee;
+$dark-gray: #787878;
+
+$main-accent :$brand-blue;
+
+/*=====Components=====*/
+//Header
+$nav-letter-spacing: .3px;
+$nav-font-size: 1.125rem; //18px
+
+
