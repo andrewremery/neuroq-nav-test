@@ -4615,6 +4615,19 @@ header {
   font-family: "Red Hat Display", "arial", san-serif;
   letter-spacing: 0.3px;
   font-size: 1.125rem; }
+  @media (min-width: 1200px) {
+    header #main-nav {
+      align-items: baseline; }
+      header #main-nav .dropdown-menu.show {
+        display: inline-block;
+        position: absolute; }
+      header #main-nav .desktop-half-col-container.show {
+        display: grid;
+        grid-template-columns: 1fr 1fr; }
+        header #main-nav .desktop-half-col-container.show .desktop-half-col {
+          grid-column: span 1; }
+          header #main-nav .desktop-half-col-container.show .desktop-half-col li {
+            padding: 0; } }
   header a {
     color: #787878; }
     header a:visited {
@@ -4635,18 +4648,30 @@ header {
     header .dropdown-item:active {
       color: #787878;
       background: #eee; }
+  @media (min-width: 1200px) {
+    header .dropdown-toggle::after {
+      display: none; } }
   header .dropdown-toggle[aria-expanded="true"]::after {
     transform: rotate(180deg); }
   header ul {
     list-style: none; }
   header #logo-wrapper {
-    padding: .5rem;
+    padding: 0.5rem;
     width: 30%; }
+    @media (min-width: 1200px) {
+      header #logo-wrapper {
+        width: 15%; } }
     header #logo-wrapper img {
       width: 100%;
       height: auto; }
   header #icons-nav {
     width: 60%; }
+    @media (min-width: 1200px) {
+      header #icons-nav {
+        width: unset;
+        order: 3; }
+        header #icons-nav #hamburg-icon {
+          display: none; } }
     header #icons-nav ul {
       display: flex;
       padding: 0;
@@ -4654,18 +4679,32 @@ header {
       header #icons-nav ul li {
         flex: 1;
         font-size: 1.5rem; }
+        @media (min-width: 1200px) {
+          header #icons-nav ul li {
+            padding: 0 1rem; } }
   header .collapse {
     display: none;
     padding: 1rem 3rem;
     background: #eee; }
+    @media (min-width: 1200px) {
+      header .collapse {
+        display: flex;
+        background: unset;
+        order: 2;
+        flex: 1; } }
+    @media (min-width: 1200px) {
+      header .collapse .navbar-nav {
+        flex-direction: row;
+        width: 100%;
+        margin-left: 25%; }
+        header .collapse .navbar-nav li {
+          padding: 0 2rem; } }
     header .collapse .collapse {
       display: flex; }
     header .collapse .dropdown-menu {
       border: none;
       background: #eee;
-      margin-top: -.5rem; }
-    header .collapse .dropdown-submenu {
-      position: relative; }
+      margin-top: -0.5rem; }
     header .collapse .dropdown-submenu a::after {
       position: absolute;
       right: 6px;

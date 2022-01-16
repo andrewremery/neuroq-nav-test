@@ -27,17 +27,7 @@ $(document).ready(function () {
     });
 
     // Make sub menu trigger on mouse in/out on desktop
-    if (window.innerWidth > 768) { //if bigger then tablet
-
-        everyitem.addEventListener('mouseleave', function (e) {
-            let el_link = this.querySelector('.dropdown-toggle');
-
-            if (el_link != null) {
-                let nextEl = el_link.nextElementSibling;
-                el_link.classList.remove('show');
-                nextEl.classList.remove('show');
-            }
-        })
+       if (window.innerWidth > 768) { //if bigger then tablet
 
         document.querySelectorAll('.navbar .nav-item').forEach(function (everyitem) {
 
@@ -62,6 +52,8 @@ $(document).ready(function () {
                 }
             })
         });
+
+        $('.mobile-only-dropdown').removeClass('dropdown-menu');
     } //end innerWidth
 
 }); //end ready

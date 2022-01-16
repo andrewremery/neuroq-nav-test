@@ -1,14 +1,31 @@
-.nav-is-open{
+.nav-is-open {
 	background: $light-gray;
 }
 header {
 	font-family: $nav-font;
 	letter-spacing: $nav-letter-spacing;
 	font-size: $nav-font-size;
-	
 
+	#main-nav {
+		@include lg {
+			align-items: baseline;
+			.dropdown-menu.show {
+				display: inline-block;
+				position: absolute;
+			}
+			.desktop-half-col-container.show {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
 
-
+				.desktop-half-col {
+					grid-column: span 1;
+					li {
+						padding: 0;
+					}
+				}
+			}
+		}
+	}
 
 	a {
 		color: $dark-gray;
@@ -22,7 +39,8 @@ header {
 			color: $dark-gray;
 		}
 	}
-	.dropdown-item{
+
+	.dropdown-item {
 		color: $dark-gray;
 		background: $light-gray;
 		&:visited {
@@ -38,18 +56,25 @@ header {
 			background: $light-gray;
 		}
 	}
+	.dropdown-toggle::after {
+		@include lg {
+			display: none;
+		}
+	}
 	// Flip carrot when selected
-	 .dropdown-toggle[aria-expanded="true"]::after{
+	.dropdown-toggle[aria-expanded="true"]::after {
 		transform: rotate(180deg);
-		
 	}
 	ul {
 		list-style: none;
 	}
 
 	#logo-wrapper {
-		padding: .5rem;
+		padding: 0.5rem;
 		width: 30%;
+		@include lg {
+			width: 15%;
+		}
 		img {
 			width: 100%;
 			height: auto;
@@ -58,14 +83,25 @@ header {
 
 	#icons-nav {
 		width: 60%;
+		@include lg {
+			width: unset;
+			order: 3;
+			#hamburg-icon {
+				display: none;
+			}
+		}
+
 		ul {
 			display: flex;
 			padding: 0;
 			margin: 0 0 0 4rem;
-			
+
 			li {
 				flex: 1;
 				font-size: 1.5rem;
+				@include lg {
+					padding: 0 1rem;
+				}
 			}
 		}
 	}
@@ -74,17 +110,31 @@ header {
 		padding: 1rem 3rem;
 		background: $light-gray;
 
+		@include lg {
+			display: flex;
+			background: unset;
+			order: 2;
+			flex: 1;
+		}
+
+		.navbar-nav {
+			@include lg {
+				flex-direction: row;
+				width: 100%;
+				margin-left: 25%;
+
+				li {
+					padding: 0 2rem;
+				}
+			}
+		}
 		.collapse {
 			display: flex;
 		}
-		.dropdown-menu{
+		.dropdown-menu {
 			border: none;
 			background: $light-gray;
-			margin-top: -.5rem;
-		}
-		.dropdown-submenu {
-			position: relative;
-			
+			margin-top: -0.5rem;
 		}
 
 		.dropdown-submenu a::after {
@@ -99,7 +149,6 @@ header {
 			left: 100%;
 			margin-left: 0.1rem;
 			margin-right: 0.1rem;
-			
 		}
 	}
 }
