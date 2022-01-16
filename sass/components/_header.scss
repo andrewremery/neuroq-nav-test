@@ -7,7 +7,7 @@ header {
 		background: $light-gray;
 	}
 
-	a {
+	a, .nav-link {
 		color: $dark-gray;
 
 		&:visited {
@@ -15,13 +15,16 @@ header {
 		}
 		&:hover {
 			color: $dark-gray;
+			text-decoration: $link-underline;
 		}
 		&:active {
 			color: $dark-gray;
+			text-decoration: $link-underline;
 		}
 	}
 
 	#main-nav {
+		box-shadow: 0 2px 26px 0 rgba(0, 0, 0, 0.14);
 		@include lg {
 			align-items: baseline;
 		}
@@ -66,6 +69,11 @@ header {
 					font-size: 1.5rem;
 					@include lg {
 						padding: 0 1rem;
+					}
+					a{
+						&:hover {
+							color: $main-accent;
+						}	
 					}
 				}
 			}
@@ -137,11 +145,11 @@ header {
 					background: $light-gray;
 				}
 				&:hover {
-					color: $dark-gray;
+					color: $main-accent;
 					background: $light-gray;
 				}
 				&:active {
-					color: $dark-gray;
+					color: $main-accent;
 					background: $light-gray;
 				}
 			}
