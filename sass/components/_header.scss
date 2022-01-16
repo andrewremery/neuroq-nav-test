@@ -1,34 +1,15 @@
-.nav-is-open {
-	background: $light-gray;
-}
 header {
 	font-family: $nav-font;
 	letter-spacing: $nav-letter-spacing;
 	font-size: $nav-font-size;
 
-	#main-nav {
-		@include lg {
-			align-items: baseline;
-			.dropdown-menu.show {
-				display: inline-block;
-				position: absolute;
-			}
-			.desktop-half-col-container.show {
-				display: grid;
-				grid-template-columns: 1fr 1fr;
-
-				.desktop-half-col {
-					grid-column: span 1;
-					li {
-						padding: 0;
-					}
-				}
-			}
-		}
+	&.nav-is-open {
+		background: $light-gray;
 	}
 
 	a {
 		color: $dark-gray;
+
 		&:visited {
 			color: $dark-gray;
 		}
@@ -40,115 +21,159 @@ header {
 		}
 	}
 
-	.dropdown-item {
-		color: $dark-gray;
-		background: $light-gray;
-		&:visited {
-			color: $dark-gray;
-			background: $light-gray;
-		}
-		&:hover {
-			color: $dark-gray;
-			background: $light-gray;
-		}
-		&:active {
-			color: $dark-gray;
-			background: $light-gray;
-		}
-	}
-	.dropdown-toggle::after {
+	#main-nav {
 		@include lg {
-			display: none;
-		}
-	}
-	// Flip carrot when selected
-	.dropdown-toggle[aria-expanded="true"]::after {
-		transform: rotate(180deg);
-	}
-	ul {
-		list-style: none;
-	}
-
-	#logo-wrapper {
-		padding: 0.5rem;
-		width: 30%;
-		@include lg {
-			width: 15%;
-		}
-		img {
-			width: 100%;
-			height: auto;
-		}
-	}
-
-	#icons-nav {
-		width: 60%;
-		@include lg {
-			width: unset;
-			order: 3;
-			#hamburg-icon {
-				display: none;
-			}
+			align-items: baseline;
 		}
 
 		ul {
-			display: flex;
-			padding: 0;
-			margin: 0 0 0 4rem;
+			list-style: none;
+		}
 
-			li {
-				flex: 1;
-				font-size: 1.5rem;
+		#logo-wrapper {
+			padding: 0.5rem;
+			width: 30%;
+			@include lg {
+				width: 15%;
+			}
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		#icons-nav {
+			width: 60%;
+			@include lg {
+				width: unset;
+				order: 3;
+			}
+
+			#hamburg-icon {
 				@include lg {
-					padding: 0 1rem;
+					display: none;
+				}
+			}
+
+			ul {
+				display: flex;
+				padding: 0;
+				margin: 0 0 0 4rem;
+
+				li {
+					flex: 1;
+					font-size: 1.5rem;
+					@include lg {
+						padding: 0 1rem;
+					}
 				}
 			}
 		}
-	}
-	.collapse {
-		display: none;
-		padding: 1rem 3rem;
-		background: $light-gray;
-
-		@include lg {
-			display: flex;
-			background: unset;
-			order: 2;
-			flex: 1;
-		}
-
 		.navbar-nav {
 			@include lg {
 				flex-direction: row;
 				width: 100%;
 				margin-left: 25%;
+			}
 
-				li {
+			li {
+				@include lg {
 					padding: 0 2rem;
 				}
 			}
+
+			.dropdown-toggle {
+				&:after {
+					@include lg {
+						display: none;
+					}
+				}
+
+				// Flip carrot when selected
+				&[aria-expanded="true"]::after {
+					transform: rotate(180deg);
+				}
+			}
+
+			.desktop-half-col-container.show {
+				@include lg {
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+				}
+
+				.desktop-half-col {
+					@include lg {
+						grid-column: span 1;
+					}
+
+					li {
+						@include lg {
+							padding: 0;
+						}
+					}
+				}
+			}
 		}
-		.collapse {
-			display: flex;
-		}
+
 		.dropdown-menu {
 			border: none;
 			background: $light-gray;
 			margin-top: -0.5rem;
-		}
 
-		.dropdown-submenu a::after {
-			//transform: rotate(-90deg);
-			position: absolute;
-			right: 6px;
-			top: 0.8em;
-		}
+			&.show {
+				@include lg {
+					display: inline-block;
+					position: absolute;
+				}
+			}
 
-		.dropdown-submenu .dropdown-menu {
-			top: 0;
-			left: 100%;
-			margin-left: 0.1rem;
-			margin-right: 0.1rem;
+			.dropdown-item {
+				color: $dark-gray;
+				background: $light-gray;
+
+				&:visited {
+					color: $dark-gray;
+					background: $light-gray;
+				}
+				&:hover {
+					color: $dark-gray;
+					background: $light-gray;
+				}
+				&:active {
+					color: $dark-gray;
+					background: $light-gray;
+				}
+			}
+			.dropdown-submenu {
+				&a::after {
+					position: absolute;
+					right: 6px;
+					top: 0.8em;
+				}
+
+				.dropdown-menu {
+					top: 0;
+					left: 100%;
+					margin-left: 0.1rem;
+					margin-right: 0.1rem;
+				}
+			}
+		}
+		.collapse {
+			padding: 1rem 3rem;
+			background: $light-gray;
+
+			@include lg {
+				display: flex;
+				background: unset;
+				order: 2;
+				flex: 1;
+			}
+
+			.collapse {
+				display: flex;
+			}
 		}
 	}
 }
