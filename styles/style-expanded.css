@@ -11914,12 +11914,15 @@ header {
         display: flex;
         padding: 0;
         margin: 0 0 0 4rem; }
+        @media (min-width: 1200px) {
+          header #main-nav #icons-nav ul {
+            margin: 0 0 0 4rem; } }
         header #main-nav #icons-nav ul li {
           flex: 1;
           font-size: 1.5rem; }
           @media (min-width: 1200px) {
             header #main-nav #icons-nav ul li {
-              padding: 0 1rem; } }
+              padding: 0 1.5rem; } }
           header #main-nav #icons-nav ul li a:hover {
             color: #4ec2eb; }
     @media (min-width: 1200px) {
@@ -11955,7 +11958,8 @@ header {
           position: absolute; } }
       header #main-nav .dropdown-menu .dropdown-item {
         color: #787878;
-        background: #eee; }
+        background: #eee;
+        padding-left: 0; }
         header #main-nav .dropdown-menu .dropdown-item:visited {
           color: #787878;
           background: #eee; }

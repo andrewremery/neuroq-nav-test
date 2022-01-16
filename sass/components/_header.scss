@@ -63,12 +63,15 @@ header {
 				display: flex;
 				padding: 0;
 				margin: 0 0 0 4rem;
+				@include lg {
+					margin: 0;
+				}
 
 				li {
 					flex: 1;
 					font-size: 1.5rem;
 					@include lg {
-						padding: 0 1rem;
+						padding: 0 1.5rem;
 					}
 					a{
 						&:hover {
@@ -139,6 +142,7 @@ header {
 			.dropdown-item {
 				color: $dark-gray;
 				background: $light-gray;
+				padding-left: 0;
 
 				&:visited {
 					color: $dark-gray;
