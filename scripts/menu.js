@@ -19,9 +19,9 @@ $(document).ready(function () {
 
     // Toggle mobile menu when hamburger is clicked
     $('#hamburg-icon').on('click', function (e) {
-        $('header').toggleClass("nav-is-open");
-        $('#navbarNavDropdown').toggleClass("show");
-        $('#hamburg-icon i').toggleClass("fa-bars fa-times");
+        $('header').toggleClass('nav-is-open');
+        $('#navbarNavDropdown').toggleClass('show');
+        $('#hamburg-icon i').toggleClass('fa-bars fa-times');
         $('.fa-search , .fa-shopping-bag').toggle();
         e.preventDefault();
     });
@@ -57,7 +57,7 @@ $(document).ready(function () {
             $('.mobile-only-dropdown').removeClass('dropdown-menu');
         } //end innerWidth
     }
-    
+
     dropdownOnHover();
     $(window).resize(function () {
         dropdownOnHover();
