@@ -4,13 +4,14 @@ $(document).ready(function () {
     $('.dropdown-menu a.dropdown-toggle').on('click', function (e) {
         if (!$(this).next().hasClass('show')) {
             $(this).parents('.dropdown-menu').first().find('.show').removeClass('show');
+            
         }
         var $subMenu = $(this).next('.dropdown-menu');
         $subMenu.toggleClass('show');
-
-
+       
         $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function (e) {
             $('.dropdown-submenu .show').removeClass('show');
+          
         });
 
         return false;
@@ -18,7 +19,10 @@ $(document).ready(function () {
 
     // Toggle mobile menu when hamburger is clicked
     $('#hamburg-icon').on('click', function (e) {
+        $('header').toggleClass("nav-is-open");
         $('#navbarNavDropdown').toggleClass("show");
+        $('#hamburg-icon i').toggleClass("fa-bars fa-times");
+        $('.fa-search , .fa-shopping-bag').toggle();
         e.preventDefault();
     });
 

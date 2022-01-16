@@ -4608,41 +4608,72 @@ readers do not read off random characters that represent icons */
 .icon {
   font-family: "Font Awesome 5 Free"; }
 
+.nav-is-open {
+  background: #eee; }
+
 header {
   font-family: "Red Hat Display", "arial", san-serif;
   letter-spacing: 0.3px;
   font-size: 1.125rem; }
+  header a {
+    color: #787878; }
+    header a:visited {
+      color: #787878; }
+    header a:hover {
+      color: #787878; }
+    header a:active {
+      color: #787878; }
+  header .dropdown-item {
+    color: #787878;
+    background: #eee; }
+    header .dropdown-item:visited {
+      color: #787878;
+      background: #eee; }
+    header .dropdown-item:hover {
+      color: #787878;
+      background: #eee; }
+    header .dropdown-item:active {
+      color: #787878;
+      background: #eee; }
+  header .dropdown-toggle[aria-expanded="true"]::after {
+    transform: rotate(180deg); }
   header ul {
     list-style: none; }
   header #logo-wrapper {
+    padding: .5rem;
     width: 30%; }
     header #logo-wrapper img {
       width: 100%;
       height: auto; }
   header #icons-nav {
-    width: 70%; }
+    width: 60%; }
     header #icons-nav ul {
       display: flex;
       padding: 0;
-      margin: 0; }
+      margin: 0 0 0 4rem; }
       header #icons-nav ul li {
         flex: 1;
         font-size: 1.5rem; }
   header .collapse {
-    display: none; }
+    display: none;
+    padding: 1rem 3rem;
+    background: #eee; }
     header .collapse .collapse {
       display: flex; }
+    header .collapse .dropdown-menu {
+      border: none;
+      background: #eee;
+      margin-top: -.5rem; }
     header .collapse .dropdown-submenu {
       position: relative; }
     header .collapse .dropdown-submenu a::after {
-      transform: rotate(-90deg);
       position: absolute;
       right: 6px;
-      top: .8em; }
+      top: 0.8em; }
     header .collapse .dropdown-submenu .dropdown-menu {
       top: 0;
       left: 100%;
-      margin-left: .1rem;
-      margin-right: .1rem; }
+      margin-left: 0.1rem;
+      margin-right: 0.1rem; }
 
 /*# sourceMappingURL=style-expanded.css.map */
