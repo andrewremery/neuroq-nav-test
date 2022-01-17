@@ -1,17 +1,134 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <title>NeuroQ Nav Test</title>
-  <meta name="author" content="Andrew R Emery">
-  <meta name="description" content="A code exam for a front-end developer position at LifeSeasons.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="style.css" rel="stylesheet">
+	<meta charset="utf-8">
+	<title>NeuroQ Nav Test</title>
+	<meta name="author" content="Andrew R Emery">
+	<meta name="description" content="A code exam for a front-end developer position at LifeSeasons.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="style.css" rel="stylesheet">
 </head>
+
 <body>
-  <p>Hello, world!</p>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="scripts/scripts.js"></script>
+	<header>
+	
+				<nav id="main-nav" class="nav navbar">
+					<section id="logo-wrapper">
+						<a href="#" title="Go to the homepage">
+							<img src="img/neuroq-logo.png" alt="NeuroQ Logo">
+						</a>
+					</section>
+					<section id="icons-nav">
+						<ul>
+							<li><a href="#"><i class="icon fa-search"></i></a></li>
+							<li><a href="#"><i class="icon fa-shopping-bag"></i></a></li>
+							<li><a href="#" id="hamburg-icon"><i class="fas fa-bars"></i></a></li>
+						</ul>
+					</section>
+
+					<div class="collapse navbar-collapse" id="navbarNavDropdown">
+						<ul class="navbar-nav">
+							<li class="nav-item active">
+								<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="http://example.com"
+									id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+									aria-expanded="false">
+									Our Products
+								</a>
+								<ul class="dropdown-menu desktop-half-col-container" aria-labelledby="navbarDropdownMenuLink">
+									<li class="nav-item dropdown-submenu desktop-half-col">
+										<a class="nav-link dropdown-item dropdown-toggle" href="#"><strong>Prevention (Brain Health)</strong></a>
+										<ul class="dropdown-menu mobile-only-dropdown">
+											<li><a class="dropdown-item" href="#">Protect</a></li>
+											<li><a class="dropdown-item" href="#">Advanced</a></li>
+											<li><a class="dropdown-item" href="#">Sleep Now</a></li>
+											<li><a class="dropdown-item" href="#">Essentials</a></li>
+											<li><a class="dropdown-item" href="#">Mind & Mood</a></li>
+											<li><a class="dropdown-item" href="#">Calm & Relax</a></li>
+											<li><a class="dropdown-item" href="#">Perform</a></li>
+											<li><a class="dropdown-item" href="#">Think Quick</a></li>
+										</ul>
+									</li>
+
+									<li class="nav-item dropdown-submenu desktop-half-col">
+										<a class="nav-link dropdown-item dropdown-toggle" href="#"><strong>Reversal (ReCode)</strong></a>
+										<ul class="dropdown-menu mobile-only-dropdown">
+											<li><a class="dropdown-item" href="#">Who It's For</a></li>
+											<li><a class="dropdown-item" href="#">How it Works</a></li>
+											<li><a class="dropdown-item" href="#">Ingredients</a></li>
+											<li><a class="dropdown-item" href="#">How to Take</a></li>
+											<li><a class="dropdown-item" href="#">The ReCODE Protocol</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<!--End Our Products-->
+
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="http://example.com"
+									id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+									aria-expanded="false">
+									Why NeuroQ
+								</a>
+								<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+									<li><a class="dropdown-item" href="#">Dr. Bredesen & <em>The End of
+												Alzheimer's</em></em></a></li>
+									<li><a class="dropdown-item" href="#">Clinical Studies</a></li>
+									<li><a class="dropdown-item" href="#">Testimonials</a></li>
+									<li><a class="dropdown-item" href="#">FAQs</a></li>
+								</ul>
+							</li>
+							<!--End Why NeuroQ-->
+
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="http://example.com"
+									id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+									aria-expanded="false">
+									Blog
+								</a>
+								<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+									<li><a class="dropdown-item" href="#">Brain Health</a></li>
+									<li><a class="dropdown-item" href="#">Exercise</a></li>
+									<li><a class="dropdown-item" href="#">Nutrition</a></li>
+									<li><a class="dropdown-item" href="#">Focus</a></li>
+									<li><a class="dropdown-item" href="#"><strong>Browse All</strong></a></li>
+								</ul>
+							</li>
+							<!--End Blog-->
+
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="http://example.com"
+									id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+									aria-expanded="false">
+									Shop
+								</a>
+								<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+									<li><a class="dropdown-item" href="#">Personalize Your Brain Health</a></li>
+									<li><a class="dropdown-item" href="#">Shop Brain Health</a></li>
+									<li><a class="dropdown-item" href="#">Shop ReCODE</a></li>
+									<li><a class="dropdown-item" href="#"><strong>Shop All</strong></a></li>
+								</ul>
+							</li>
+							<!--End Shop-->
+							</li>
+						</ul>
+					</div>
+				</nav>
+		
+	</header>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+	<script src="scripts/scripts.min.js"></script>
 </body>
 
 </html>

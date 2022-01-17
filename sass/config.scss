@@ -1,0 +1,20 @@
+/*=====Varaibles=====*/
+//Font Families
+$nav-font: "Red Hat Display", "arial", san-serif;
+
+//Colors
+$brand-blue: #4ec2eb;
+$light-gray: #eee;
+$dark-gray: #787878;
+
+$main-accent :$brand-blue;
+
+/*=====Components=====*/
+//a
+$link-underline: underline solid $main-accent;
+
+//Header
+$nav-letter-spacing: .3px;
+$nav-font-size: 1.125rem; //18px
+
+
